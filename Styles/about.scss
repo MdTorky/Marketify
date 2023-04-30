@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+
+@font-face {
+  font-family: 'Exo';
+  src: url(./fonts/Exo2.0-Medium.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* ScrollBar */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #87adfe, #ff77cd);
+}
+
+
+/* Header Section */
+.container2{
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/About us/background.png");
+    background-position: center;
+    background-size: cover;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+/* Who Are We Section */
+.content h1{
+    font-size: 60px;
+    font-weight: 100;
+    margin-top: 24px;
+    margin-bottom: 15px;
+    color: #232d60;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+.content p{
+    font-size: 15px;
+    color: #6a7199;
+    width: 500px;
+    font-family: 'Poppins', sans-serif;
+}
+.content{
+    margin-left: 10%;
+    margin-top: 10%;
+}
+.content .btn{
+    display: inline-block;
+    background: linear-gradient(45deg, #87adfe, #ff77cd);
+    padding: 10px 20px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 3px 8px 22px rgba(94, 28, 68, 0.15);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: all 0.8s;
+}
+.content .btn:hover{
+  letter-spacing:2px;   
+  text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+  0px -4px 10px rgba(255,255,255,0.3);
+  box-shadow:  2px 7px 5px rgba(0,0,0,0.3), 
+  0px -4px 10px rgba(255,255,255,0.3);
+}
+.content .icons{
+  margin-top: 40px;
+  display: inline-flex;
+  gap: 10px;
+}
+.icons a{
+  border-radius: 40px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  margin-right:25px;
+  color: #87ADFE;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.07);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+.icons a .fab{
+  font-size: 20px;
+  position: absolute;
+  z-index: 10;
+  line-height: 80px;
+  transition: color 0.5s;
+}
+.icons a::after{
+  content: '';
+  width: 40px;
+  height: 100%;
+  top: -40px;
+  left:0;
+  background: #87ADFE;
+  background: linear-gradient(to right, #87ADFE 0%, #ff77cd 100%);
+  position: absolute;
+  transition: 0.5s;
+}
+.icons a:hover::after{
+  top:0;
+}
+.icons a:hover .fab{
+ color: white;
+}
+.icons a:hover{
+  transform: translateY(-10px);
+}
+.circle{
+  width: 500px;
+  height:500px;
+  border-radius:100%;
+  background: rgb(191,219,251);
+  background: linear-gradient(190deg, rgba(191,219,251,1) 0%, rgba(207,205,248,1) 100%);
+  position: absolute;
+  top: 250px;
+  right: 350px;
+  transition: 0.3s;
+}
+.circle:hover{
+  right: 300px;
+}
+.feature-img{
+  height:60%;
+  position: absolute;
+  bottom: 0;
+  top: 200px;
+  right: 400px;
+  transform: rotate(-0.2rad);
+  filter: brightness(0) invert(1);
+  transition: 0.3s;
+}
+.feature-img:hover{
+  right: 450px;
+  top: 180px;
+}
+
+
+.anim{
+  animation: moveright 0.5s linear 1;
+  animation-delay: 0.5s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+}
+.anim2{
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveup 0.5s linear forwards;
+}
+.anim3{
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveup 0.9s linear forwards;
+}
+
+
+@keyframes moveright{
+  0%{
+    transform: translateX(-100px);
+    visibility: visible;
+  }
+  100%{
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
+@keyframes moveup{
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+
+
+
+
+/* About US section */
+.main{
+  width: 1500px;
+  margin: 0 auto;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 30px;
+  border-radius: 30px;
+  gap: 160px;
+}
+.main h1{
+  text-align: center;
+  font-size: 60px;
+  position: absolute;
+  top: 1000px;
+  left: 800px;
+  color: rgb(0, 0, 0);
+  background: #87ADFE;
+  background: linear-gradient(to right, #87ADFE 0%, #ff77cd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+.box1{
+  height: 350px;
+  width: 300px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: linear-gradient(190deg, rgba(191,219,251,1) 0%, rgb(177, 174, 225) 100%);
+  border-radius: 30px;;
+}
+.box2{
+  width: 350px;
+  position: absolute;
+  background: linear-gradient(190deg, rgba(191,219,251,1) 0%, rgb(177, 174, 225) 100%);
+  right: 1000px;
+  height: 100px;
+  z-index: -1;
+}
+.box3{
+  width: 200px;
+  height: 90px;
+  position: absolute;
+  background: linear-gradient(190deg, rgba(191,219,251,1) 0%, rgb(177, 174, 225) 100%);
+  right: 625px;
+  border-radius: 10px;
+  z-index: -1;
+}
+.profile-card{
+  /* Mohamed Tarek Torky */
+  position: relative;
+  width: 220px;
+  height: 230px;
+  background: #fff; 
+  padding: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 22px #3336;
+  transition: .6s;
+  margin: 0 25px;
+}
+.profile-card:hover{
+  border-radius: 10px;
+  height: 300px;
+}
+.profile-card .img, .img2{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: .6s;
+  z-index: 99;
+}
+.profile-card:hover .img, .img2{
+  transform: translateY(-68px);
+}
+.img img{
+  border-radius: 50%;
+  transition: .6s;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-right: 100px;
+}
+.left{
+  position: absolute;
+  right: -110px; 
+}
+.left2{
+  position: absolute;
+  right: 20px; 
+}
+.profile-card:hover img{
+  border-radius: 10px;
+}
+.caption{
+  text-align: center;
+  transform: translateY(-80px);
+  opacity: 0;
+  transition: .6s;
+}
+.profile-card:hover .caption{
+  opacity: 1;
+}
+.caption h3{
+  font-size: 19px;
+  font-weight: 900;
+}
+.caption p{
+  font-size: 15px;
+  color: #0c52a1;
+  margin: 2px 0 0px 0;
+  font-weight: 800;
+}
+.caption h5{
+  font-size: 12px;
+  text-align: center;
+  font-weight: 1000;
+  background: #87ADFE;
+  background: linear-gradient(to right, #87ADFE 0%, #ff77cd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+.hidden{
+  color: royalblue;
+}
+
+
+
+
+
+/* Quote of the Day Section*/
+.back{
+  background:linear-gradient(rgba(0, 0, 0, 0.4),
+  rgba(0, 0, 0, 0.4)), url("../img/About us/banner.jpg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  width: 80%;
+  height: 40vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 40px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.box {
+  background-color: transparent;
+  border-radius: 3px;
+  color: #fff;
+  width: 400px;
+  height: 300px;
+  transform-style: preserve-3d;
+  perspective: 2000px;  
+  transition: 0.4s;
+  text-align: center;
+}
+.box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border-top: 20px solid rgb(255, 255, 255);
+  border-left: 20px solid rgb(255, 255, 255);
+  box-sizing: border-box;
+}
+.box:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 20px solid rgb(255, 255, 255);
+  border-right: 20px solid rgb(255, 255, 255);
+  box-sizing: border-box;
+}
+.box .fas {
+  font-size: 25px;
+  height: 50px;
+  width: 50px;
+  line-height: 50px !important;
+  background-color: rgb(255, 255, 255);
+  color: #030303;
+}
+.box .fa2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+.box .text {
+  position: absolute;
+  top: 30px;
+  left: -30px;
+  width: calc(100% + 60px);
+  height: calc(100% - 60px);
+  background-color: #2C3A47;
+  border-radius: 3px;
+  transition: 0.4s;
+}
+.box .text .fa1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.box .text div {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  text-align: center;
+  width: 100%;
+  padding: 30px 60px;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+.box .text div h3 {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+.box .text div p {
+  font-size: 18px;
+}
+.box:hover {
+  transform: rotateY(-20deg) skewY(3deg);
+}
+.box:hover .text {
+  transform: rotateY(20deg) skewY(-3deg);
+}

@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Coiny-Cyrillic';
+    src:url('../fonts/Coiny-Cyrillic.ttf.woff') format('woff'),
+        url('../fonts/Coiny-Cyrillic.ttf.svg#Coiny-Cyrillic') format('svg'),
+        url('../fonts/Coiny-Cyrillic.ttf.eot'),
+        url('../fonts/Coiny-Cyrillic.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Background */
+
+.hero{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(20,0,0,0.7)),url(../img/sign-background.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+
+
+/* Form */
+
+img{
+    position: absolute;
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    left: 36px;
+    top: -40px;
+    border-radius:190px;
+}
+
+.form-box{
+    width: 380px;
+    height: 680px;
+    position: relative;
+    margin: 10% auto;
+    background: white;
+    padding: 5px; 
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.form-box2{
+    width: 380px;
+    height: 380px;
+    position: relative;
+    margin: 10% auto;
+    background: white;
+    padding: 5px; 
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+
+
+/* Sign-Up and Sign-In Buttons --Top-- */
+
+
+.button-box{
+    width: 220px;
+    margin: 180px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+}
+
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    transition: 0.3s;
+}
+
+.toggle-btn:hover{
+    color: #ff5010;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+}
+
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #ff5010, #eedb4f);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+
+/* Input Fields */
+
+.input{
+    top: 240px;
+    position: absolute;
+    width: 280px;
+    transition: 0.5s;
+
+}
+
+.input-field{
+    width:100%;
+    padding: 5px 0;
+    margin: 15px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;   
+    font-family: 'Coiny-Cyrillic';  
+}
+
+.sbtn{
+    width: 85;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #ff5010, #eedb4f);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    transition: 0.5s;
+    font-family: 'Coiny-Cyrillic';
+}
+
+.sbtn:hover{
+    transform: scale(1.3);
+    color: white;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+}
+
+
+
+
+/* Eye Shape */
+
+#togglePassword{
+    cursor: pointer;
+    position: absolute;
+    left: 90%;
+    bottom: 34%;
+    display: felx;
+    color:rgba(0, 0, 0, 0.476);
+}
+
+#sign_inP{
+    left: 90%;
+    bottom: 42%;
+    cursor: pointer;
+    position: absolute;
+    color:rgba(0, 0, 0, 0.476)
+}
+
+small{
+    visibility: hidden;
+}
+
+
+.check{
+    margin: 40px 10px 30px 0;
+}
+
+
+
+
+/* Terms & Conditions Part */
+
+.terms{
+    color: #777;
+    font-size: 12px;
+    bottom: 70px;
+    position: absolute;
+    margin-bottom: -5px;
+    font-family: 'Coiny-Cyrillic';
+}
+
+.conditions{
+    text-decoration: none;
+    font-weight: bold;
+    color: #ff5010;
+    transition: 0.8s;
+}
+
+a:hover{
+    font-size: 15px;
+    background-color: #ff5010;
+    padding: 5px;
+    border-radius: 50px;
+    color: white;
+}
+
+
+
+
+/* Sign-Up and Sign-In Buttons --Bottom-- */
+
+#sign-up{
+    left: 50px;
+}
+
+#sign-in{
+    left: 450px;
+}
+
+
+
+
+/* Error Message */
+
+.error  {
+    color: #ff5010;
+    text-align: center;
+    width: 280px;
+    font-size: 12px;
+    background: none;
+    border-left: 2px double #eedb4f;
+    border-top: 0;
+    border-right: 2px double #eedb4f;
+    border-bottom: 0;
+    border-radius: 10px;
+    margin-top: -5px;
+    position: absolute;
+    font-family: 'Coiny-Cyrillic';
+}
+
+.error1  {
+    color: #ff5010;
+    text-align: center;
+    width: 280px;
+    font-size: 12px;
+    background: none;
+    border-left: 2px double #eedb4f;
+    border-top: 0;
+    border-right: 2px double #eedb4f;
+    border-bottom: 0;
+    border-radius: 10px;
+    margin-top: 10px;
+    position: absolute;
+    font-family: 'Coiny-Cyrillic';
+}
+
+
+
+
+/* Account Creation Message */
+
+.error2  {
+    color: #10ff64;
+    text-align: center;
+    width: 280px;
+    font-size: 12px;
+    background: none;
+    border-left: 2px double #eedb4f;
+    border-top: 0;
+    border-right: 2px double #eedb4f;
+    border-bottom: 0;
+    border-radius: 10px;
+    margin-top: 10px;
+    position: absolute;
+    font-family: 'Coiny-Cyrillic';
+}
+

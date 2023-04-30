@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+
+
+@font-face {
+   font-family: 'Coiny-Cyrillic';
+   src: url('../fonts/Coiny-Cyrillic.ttf.woff') format('woff'),
+      url('../fonts/Coiny-Cyrillic.ttf.svg#Coiny-Cyrillic') format('svg'),
+      url('../fonts/Coiny-Cyrillic.ttf.eot'),
+      url('../fonts/Coiny-Cyrillic.ttf.eot?#iefix') format('embedded-opentype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+
+:root {
+   --blue: #3498db;
+   --dark-blue: #2980b9;
+   --red: #e74c3c;
+   --dark-red: #c0392b;
+   --black: #333;
+   --white: #fff;
+   --light-bg: #eee;
+   --uneditable-text: rgba(162, 162, 162, 0.339);
+   --box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+
+
+html {
+   font-size: 10px;
+   font-family: 'Coiny-Cyrillic';
+   scroll-behavior: smooth;
+}
+
+
+.no{
+   padding-left: 5%;
+   padding-right: 5%;
+}
+
+#header {
+   position: sticky;
+   z-index: 1000;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: auto;
+}
+
+#header .header {
+   min-height: 8vh;
+   background: none;
+   transition: 0.3s ease background-color;
+   
+}
+
+#header .nav {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+   height: 20%;
+   max-width: 1600px;
+   padding: 0 10px;
+   
+}
+
+#header .nav-list ul {
+   list-style: none;
+   position: absolute;
+   background-color: rgb(31, 30, 30);
+   width: 100vw;
+   height: 100vh;
+   left: 100%;
+   top: 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   z-index: 1;
+   overflow-x: hidden;
+   transition: 0.5s ease left;
+   
+}
+
+#header .nav-list ul.active {
+   left: 0%;
+}
+
+#header .nav-list ul a {
+   font-size: 2.5rem;
+   font-weight: 500;
+   letter-spacing: 0.2rem;
+   text-decoration: none;
+   color: rgb(0, 0, 0);
+   text-transform: uppercase;
+   padding: 20px;
+   display: block;
+
+
+   color: #0000;
+   background:
+      linear-gradient(90deg, #ff5010 50%, #000 0) var(--_p, 100%)/200% no-repeat;
+   -webkit-background-clip: text;
+   background-clip: text;
+   transition: .4s;
+   text-shadow: 3px 5px 7px rgba(0, 0, 0, 0.6);
+}
+
+
+#header .nav-list ul li:hover a {
+   --_p: 0%;
+}
+
+#header .menu {
+   height: 60px;
+   width: 60px;
+   display: inline-block;
+   border: 3px solid white;
+   border-radius: 50%;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 100;
+   cursor: pointer;
+   transform: scale(0.8);
+   margin-right: 20px;
+}
+
+#header .menu:after {
+   position: absolute;
+   content: '';
+   height: 100%;
+   width: 100%;
+   border-radius: 50%;
+   border: 3px solid white;
+   animation: menu_puls 1s ease infinite;
+}
+
+#header .menu .bar {
+   height: 2px;
+   width: 30px;
+   position: relative;
+   background-color: white;
+   z-index: -1;
+}
+
+#header .menu .bar::after,
+#header .menu .bar::before {
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   left: 0;
+   background-color: white;
+   transition: 0.3s ease;
+   transition-property: top, bottom;
+}
+
+#header .menu .bar::after {
+   top: 8px;
+}
+
+#header .menu .bar::before {
+   bottom: 8px;
+}
+
+#header .menu.active .bar::before {
+   bottom: 0;
+}
+
+#header .menu.active .bar::after {
+   top: 0;
+}
+
+
+
+
+
+
+
+/* Navagation Bar */
+
+.navbar {
+   transition: 0.5s;
+}
+
+.navbar:hover {
+   font-size: 24px;
+}
+
+
+
+
+.account {
+   position: absolute;
+   margin-left: 100px;
+   top: 37%;
+   transition: 0.4s ease;
+   filter: drop-shadow(3px 5px 7px rgba(0, 0, 0, 0.6));
+   cursor: pointer;
+}
+
+.account:hover {
+   position: absolute;
+   filter: invert(34%) sepia(55%) saturate(1604%) hue-rotate(337deg) brightness(107%) contrast(84%);
+   transform: scale(1.2);
+}
+
+
+.logo {
+   width: 30%;
+}
+
+
+
+
+
+
+
+/* Keyframes */
+@keyframes menu_puls {
+    0% {
+       opacity: 1;
+       transform: scale(1);
+    }
+ 
+    100% {
+       opacity: 0;
+       transform: scale(1.4);
+    }
+ }
+ 
+ @keyframes text_reveal_box {
+    50% {
+       width: 100%;
+       left: 0;
+    }
+ 
+    100% {
+       width: 0;
+       left: 100%;
+    }
+ }
+ 
+ @keyframes text_reveal {
+    100% {
+       color: white;
+    }
+ }
+ 
+ @keyframes text_reveal_name {
+    100% {
+       color: crimson;
+       font-weight: 500;
+    }
+ }
+ 
+ 
+ 
+ /* Media Section */
+ 
+ @media(max-width: 700px) {
+ 
+ 
+    #home h1 {
+       font-size: 34px;
+    }
+ 
+    #about h1 {
+       font-size: 34px;
+    }
+ 
+    .contact h1 {
+       font-size: 24px;
+    }
+ 
+    .row {
+       flex-direction: column;
+    }
+ 
+ 
+ }
+ 
+ 
+ @media only screen and (min-width: 1200px) {
+ 
+ 
+    #header .menu {
+       display: none;
+    }
+ 
+    #header .nav-list ul {
+       position: initial;
+       display: block;
+       height: auto;
+       width: fit-content;
+       background-color: transparent;
+    }
+ 
+    #header .nav-list ul li {
+       display: inline-block;
+    }
+ 
+    #header .nav-list ul li a {
+       font-size: 1.8rem;
+    }
+ 
+    #header .nav-list ul a:after {
+       display: none;
+    }
+ 
+ }
